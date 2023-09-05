@@ -2,14 +2,14 @@
 layout: home
 
 hero:
-  image: https://www.github.com/yyx990803.png
+  image: https://bpic.588ku.com/art_origin_min_pic/19/03/16/e2e514b18e91337c30b94f1e7a6bf24f.jpg
   alt: logo image
-  name: 只爭朝夕不負韶華
-  text: CSDN演示
-  tagline: 努力学习的程序猿
+  name: 学无止境，温故而知新
+  text: 学习随记
+  tagline: 努力搬砖的程序猿
   actions:
     - theme: brand
-      text: CSDN个人主页
+      text: Gitee个人主页
       link: https://blog.csdn.net/qq_45613931
     - theme: alt
       text: VitePress中文网
@@ -31,7 +31,7 @@ features:
     details: Webpack和Vite说明。
 ---
 
-<script setup>
+<!-- <script setup>
 import { VPTeamPage,  VPTeamPageTitle,  VPTeamMembers } from 'vitepress/theme'
 
 const members = [
@@ -46,9 +46,9 @@ const members = [
     title: '负责人'
   }
 ]
-</script>
+</script> -->
 
-<VPTeamPage>
+<!-- <VPTeamPage>
   <VPTeamPageTitle>
     <template #title>
       前端参与开发人员
@@ -61,4 +61,4 @@ const members = [
     size="small"
     :members="members"
   />
-</VPTeamPage>
+</VPTeamPage> -->

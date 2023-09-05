@@ -6,7 +6,7 @@ export default defineConfig({
   // 是否启用暗黑模式
   appearance: true,
   // 网站描述
-  description: '这是一个学习笔记',
+  description: '努力搬砖的程序猿',
   // 基础路径
   base: '/',
   // <link rel="icon" type="image/svg+xml" href="https://rr-p.oss-cn-shanghai.aliyuncs.com/system-default/system-icon.png">
@@ -15,7 +15,7 @@ export default defineConfig({
   ],
   themeConfig: {
     // 设置这个后title会使用这个
-    siteTitle: '学习笔记',
+    siteTitle: '努力搬砖的程序猿',
     logo: {
       src: 'https://rr-p.oss-cn-shanghai.aliyuncs.com/system-default/system-icon.png',
       alt: ''
