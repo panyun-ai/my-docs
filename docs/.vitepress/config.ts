@@ -13,6 +13,7 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: 'https://rr-p.oss-cn-shanghai.aliyuncs.com/system-default/system-icon.png'}]
   ],
+  outDir: '../dist',
   themeConfig: {
     // 设置这个后title会使用这个
     siteTitle: '努力搬砖的程序猿',
