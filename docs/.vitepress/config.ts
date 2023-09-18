@@ -8,7 +8,7 @@ export default defineConfig({
   // 网站描述
   description: '努力搬砖的程序猿',
   // 基础路径
-  base: '/',
+  base: '/my-docs/',
   // <link rel="icon" type="image/svg+xml" href="https://rr-p.oss-cn-shanghai.aliyuncs.com/system-default/system-icon.png">
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: 'https://rr-p.oss-cn-shanghai.aliyuncs.com/system-default/system-icon.png'}]
