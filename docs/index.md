@@ -24,7 +24,7 @@ features:
   - title: jQuery
     details: jQuery说明。
   - title: Vue
-    details: Vue说明。
+    details: Vue说明dddd。
   - title: React
     details: React说明。
   - title: Webpack和Vite
