@@ -10,6 +10,7 @@ read commitMsg
 # 打印用户输入的内容
 echo "您输入的变更说明是：$commitMsg, 请确认是否提交?(Y/N)"
 read userConfirmation
+echo "您的选择是：$userConfirmation"
 if [ $userConfirmation == "n" || $userConfirmation == "N" ]; then
     {
         # 退出程序，大哥哥
