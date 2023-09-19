@@ -12,7 +12,7 @@ echo "您输入的变更说明是：$commitMsg, 请确认是否提交?(Y/N)"
 read userConfirmation
 if [ $userConfirmation == "n" || $userConfirmation == "N" ]; then
     {
-        # 退出程序
+        # 退出程序，大哥哥
         echo "您已经放弃了本次提交，程序退出"
         exit 1
     }
