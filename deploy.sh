@@ -4,15 +4,18 @@
 set -e
 
 # 输入提交的变更
-echo "请输入您的姓名："
+echo "请输入变更说明："
 read commitMsg
 
 # 打印用户输入的内容
-echo "您输入的内容是：$commitMsg, 请确认是否提交?(y/n)"
+echo "您输入的变更说明是：$commitMsg, 请确认是否提交?(Y/N)"
 read userConfirmation
-if [ $userConfirmation == "n" ]; then
-    # 退出程序
-    exit 1
+if [ $userConfirmation == "n" || $userConfirmation == "N" ]; then
+    {
+        # 退出程序
+        echo "您已经放弃了本次提交，程序退出"
+        exit 1
+    }
 else 
     {
         # 打包生成静态文件
