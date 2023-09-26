@@ -1,4 +1,6 @@
 import { defineConfig } from 'vitepress'
+import siderBar from './sidebar'
+
 
 export default defineConfig({
   // 标题
@@ -22,7 +24,7 @@ export default defineConfig({
       alt: ''
     },
     nav: [
-      { text: '开发工具', link: '/index1'},
+      { text: '实用工具', link: siderBar.toolSidebar[0].link, activeMatch: '/pages/tool/' },
       { text: '前端', items: [
           { text: '开发工具', link: '/index1'},
           { text: '开发工具', link: '/index1'}
@@ -31,19 +33,20 @@ export default defineConfig({
       { text: '后端', link: '/index'},
       { text: '数据库', link: '/index'}
     ],
-    sidebar: [
-      { text: '开发工具', link: '/index1'},
-      { text: '前端', items: [
-          { text: '开发工具', link: '/index1'},
-          { text: '开发工具', link: '/index1'}
-        ]
-      },
-      { text: '后端', link: '/index'},
-      { text: '数据库', link: '/index'}
-    ],
+    sidebar: {
+      '/pages/tool/': siderBar.toolSidebar
+    },
     docFooter: {
       prev: '上一页',
       next: '下一页'
+    },
+    outlineTitle: '当前页面'
+  },
+  vite: {
+    resolve: {
+      alias: {
+        '@': '../../../'
+      }
     }
   }
 })

@@ -3,6 +3,7 @@ layout: home
 
 hero:
   image: https://bpic.588ku.com/art_origin_min_pic/19/03/16/e2e514b18e91337c30b94f1e7a6bf24f.jpg
+  # image: https://picsum.photos/300/300
   alt: logo image
   name: 学无止境，温故而知新
   text: 学习随记
