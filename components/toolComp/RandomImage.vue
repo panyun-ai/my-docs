@@ -6,7 +6,7 @@
             </template>
         </div>
         <div class="btn-container">
-            <div class="btn-item" @click="() => { initImageList() }">换一批</div>
+            <el-button class="btn-item" @click="() => { initImageList() }">换一批</el-button>
         </div>
     </div>
 </template>
@@ -50,10 +50,6 @@ initImageList()
         height: 40px;
         justify-content: center;
         align-items: center;
-        .btn-item {
-            cursor: pointer;
-            color: blue;
-        }
     }
 }
 </style>

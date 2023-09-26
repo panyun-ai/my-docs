@@ -24,14 +24,14 @@ export default defineConfig({
       alt: ''
     },
     nav: [
-      { text: '实用工具', link: siderBar.toolSidebar[0].link, activeMatch: '/pages/tool/' },
-      { text: '前端', items: [
-          { text: '开发工具', link: '/index1'},
-          { text: '开发工具', link: '/index1'}
+      { text: '前端框架', items: [
+          { text: 'Vue3', link: '/index1'},
+          { text: 'React', link: '/index1'},
+          { text: 'Vite + Vue3', link: '/index1'},
+          { text: 'Next + React', link: '/index1'}
         ]
       },
-      { text: '后端', link: '/index'},
-      { text: '数据库', link: '/index'}
+      { text: '实用工具', link: siderBar.toolSidebar[0].link, activeMatch: '/pages/tool/' }
     ],
     sidebar: {
       '/pages/tool/': siderBar.toolSidebar
