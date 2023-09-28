@@ -15,7 +15,7 @@
 - 随机生成多张相同参数的图片
   - [https://picsum.photos/200/300?random=1](https://picsum.photos/200/300?random=1)
 
-## 案例
+## 使用案例
 
 <RandomImage />
 <script setup>

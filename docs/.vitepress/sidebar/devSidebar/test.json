@@ -1,0 +1,28 @@
+[
+    {
+        "text": "随机图片",
+        "link": "/pages/randomImage",
+        "activeMatch": "/pages/randomImage"
+    },
+    {
+        "text": "开发工具",
+        "activeMatch": "/pages/structure",
+        "items": [
+            {
+                "text": "VitePress",
+                "activeMatch": "/pages/structure/vitepress"
+            }
+        ]
+    },
+    {
+        "text": "text",
+        "activeMatch": "/pages/text",
+        "items": [
+            {
+                "text": "测试md",
+                "link": "/pages/text/text",
+                "activeMatch": "/pages/text/text"
+            }
+        ]
+    }
+]
