@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite'
+import path from 'path'
 
 export default defineConfig({
     plugins: [],
@@ -8,4 +9,9 @@ export default defineConfig({
       open: false,
       https: false,
     },
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, '../')
+      }
+    }
 })

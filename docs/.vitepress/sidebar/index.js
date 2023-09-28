@@ -1,24 +1,8 @@
-import toolSidebar from "./toolSidebar"
-import vitepressSidebar from "./devSidebar/vitepress"
 import fs from 'fs'
 import path from 'path'
 
 // Doc目录
 const PROJECT_ROOT_PATH = '../../'
-
-// 读取菜单配置文件的目录
-// const titleMatch = content.match(/^#\s+(.*)/m);
-// 读取文件
-const getFile = () => {
-    console.log('项目根目录...', path.resolve(__dirname, PROJECT_ROOT_PATH))
-    // console.log('目录', path.resolve(__dirname, 'devSidebar'))
-    // console.log('文件目录', path.resolve(__dirname, '../../pages'))
-    // const files = fs.readdirSync(path.resolve(__dirname, 'devSidebar'))
-    // const content = fs.readFileSync(path.join(path.resolve(__dirname, 'devSidebar'), files[0]), 'utf-8');
-    // const obj = JSON.parse(content)
-    // console.log('fiels...', content, obj)
-}
-// getFile()
 
 // 判断是否是目录
 const isDirectory = (rootPath, fileName) => {
@@ -55,15 +39,11 @@ const getFileDirByRoot = (filePath = '') => {
         let config = {}
         if (files.includes('config.json')) {
             config = formtConfigFile(rootPath, 'config.json')
-            // console.log('dddddddddddddddd', rootPath, config, files)
         }
         let formatFiles = []
         files.forEach(fileName => {
             const isDir = isDirectory(rootPath, fileName)
             if (isDir) {
-                // if (config && config.vitePress) {
-                //     console.log('dddddddddddddddd', rootPath, config, fileName)
-                // }
                 const childFiles = getFileDirByRoot(`${filePath}/${fileName}`)
                 if (childFiles.length) {
                     formatFiles.push({
@@ -130,7 +110,7 @@ const renderMenu = (menuPaths) => {
             nav.push({ text: item.title, link: `/${item.path.replace('.md', '')}`, activeMatch: `/${item.path.replace('.md', '')}` })
         }
     })
-    console.log('dddddddddddd', JSON.stringify(nav))
+    // console.log('dddddddddddd', JSON.stringify(nav))
     return {
         nav,
         siderBar
@@ -142,7 +122,5 @@ const { nav, siderBar } = renderMenu(menuPaths)
 // console.log('menuPaths....', JSON.parse(JSON.stringify(menuPaths)))
 export default {
     nav,
-    siderBar,
-    toolSidebar,
-    vitepressSidebar
+    siderBar
 }
