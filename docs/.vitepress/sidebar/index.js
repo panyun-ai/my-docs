@@ -28,6 +28,10 @@ const formtConfigFile = (rootPath, fileName) => {
     const content = fs.readFileSync(filePath, 'utf-8')
     return content ? JSON.parse(content) : {}
 }
+// const initConfigByFileName = (config, fileName) => {
+//     const originFileName = fileName.replace('.md', '')
+//     config[originFileName] = 
+// }
 
 const getFileDirByRoot = (filePath = '') => {
     // 获取目录下的文件
@@ -44,26 +48,42 @@ const getFileDirByRoot = (filePath = '') => {
         files.forEach(fileName => {
             const isDir = isDirectory(rootPath, fileName)
             if (isDir) {
+                // 初始化配置文件
+                config[fileName] = {
+                    title: config[fileName]?.title ?? fileName,
+                    sort: config[fileName]?.sort ?? 0
+                }
                 const childFiles = getFileDirByRoot(`${filePath}/${fileName}`)
                 if (childFiles.length) {
                     formatFiles.push({
                         path: `${filePath}/${fileName}`,
                         title: config[fileName]?.title ?? fileName,
                         isDir: true,
+                        key: fileName,
                         files: childFiles
                     })
                 }
             } else {
                 if (fileName.endsWith('.md')) {
                     const info = formatFile(rootPath, fileName)
-                    info.title && formatFiles.push({
+                    const originFileName = fileName.replace('.md', '')
+                    config[originFileName] = {
+                        title: config[originFileName]?.title ?? (info.title || originFileName),
+                        sort: config[originFileName]?.sort ?? 0
+                    }
+                    // 初始化配置文件
+                    config[originFileName].title && formatFiles.push({
                         ...info,
+                        title: config[originFileName].title,
+                        key: originFileName,
                         path: `${filePath}/${fileName}`
                     })
                 }
             }
         })
-        return formatFiles
+        return formatFiles.sort((a, b) => {
+            return config[b.key].sort - config[a.key].sort
+        })
     } catch (e) {
         console.log(`读取：${filePath} 下的文件发生错误....`)
         return []
