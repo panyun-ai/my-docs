@@ -2,5 +2,8 @@
     "structure": {
         "title": "开发工具",
         "sort": 10
+    },
+    "designPatterns": {
+        "title": "设计模式"
     }
 }
